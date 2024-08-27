@@ -1,0 +1,191 @@
+/* All styles for this web app are created here & we used media queries for achieve Responsive design*/
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: auto;
+  max-width: 1920px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 45px 10px 20px;
+  background-color: #232f3e;
+  color: #fff;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  flex-basis: 100%;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: 2px;
+  right: -20px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.cart-text {
+  margin: 0 10px;
+}
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.accordion {
+  width: 20%;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  .accordion {
+    width: 40%;
+  }
+}
+
+.accordion-section {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: start;
+}
+.accordion-header::after {
+  content: "\002b";
+  color: #000;
+  float: left;
+  margin-right: 5px;
+}
+.accordion-header.active {
+  background: #ffeb99;
+}
+.accordion-header.active::after {
+  content: "\2212";
+}
+
+.accordion-subitems {
+  text-align: start;
+}
+
+.accordion-subitem {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.accordion-subitem.active {
+  background: #ffe066;
+}
+
+.content {
+  flex: 1;
+  padding: 10px 0 10px 20px;
+  background: #fff;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+}
+.prod-header {
+  background-color: #febd69;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.add-to-cart {
+  background-color: #ffcc00;
+  border: none;
+  color: #000;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: auto;
+  align-self: self-end;
+}
+
+.add-to-cart:hover {
+  background-color: #ffe066;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33.333%, 1fr));
+}
+@media (max-width: 1023px) {
+  .products-list {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .products-list {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+.pro-title {
+  text-align: start;
+  margin: 0 0 100px;
+}
+
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-yes {
+  background: #00802b;
+  color: #fff;
+  margin: 5px;
+}
+
+.modal-no {
+  background: #ff0000;
+  color: #fff;
+  margin: 5px;
+}
